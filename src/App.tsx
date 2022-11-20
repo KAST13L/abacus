@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {useEffect} from 'react';
+import {Counter} from "./components/Counter/Counter";
+import s from './App.module.css'
+import {SettingsCounter} from "./components/SettingsCounter/SettingsCounter";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "./components/redux/store";
+import {CounterStateType, setCountValueAC, setMaxValueAC, setStartValueAC} from "./components/redux/counter-reducer";
+import {AnyAction} from "redux";
+export  const setToLocalStorage = (value: string, state: any) => {
+    localStorage.setItem(value, JSON.stringify(state[value as keyof typeof state]))
 }
 
-export default App;
+export const App = () => {
+
+    const state = useSelector<AppRootStateType, CounterStateType>(state => state.state)
+    const dispatch = useDispatch()
+
+    const getFromLocalStorage = (value: string, setter: (value: number) => AnyAction) => {
+        let valueAsString = localStorage.getItem(value)
+        if (valueAsString) {
+            let newValue = JSON.parse(valueAsString)
+            dispatch(setter(newValue))
+        }
+    }
+    useEffect(() => {
+        getFromLocalStorage('countValue', setCountValueAC)
+        getFromLocalStorage('maxValue', setMaxValueAC)
+        getFromLocalStorage('startValue', setStartValueAC)
+    }, [])
+    useEffect(() => {
+        setToLocalStorage('countValue', state)
+    }, [state.countValue])
+
+    return (
+        <div className={s.main}>
+            <div className={s.app}>
+                <SettingsCounter/>
+            </div>
+            <div className={s.app}>
+                <Counter/>
+            </div>
+        </div>
+    );
+}
+
+

@@ -1,0 +1,22 @@
+.count{
+    height: 180px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 25px 0;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 150px;
+    text-align: center;
+}
+.functional{
+    height: 120px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 25px 0;
+    padding: 5px;
+    font-size: 70px;
+    align-items: center;
+}
+.error{
+    color: red;
+}

@@ -1,0 +1,15 @@
+.app{
+  background: mediumslateblue;
+  width: 320px;
+  height: 350px;
+  margin: 70px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 35px 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  display: flex;
+}
