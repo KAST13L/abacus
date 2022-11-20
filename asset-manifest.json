@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abacus%20/static/css/main.ccf4ecf1.css",
+    "main.js": "/abacus%20/static/js/main.5ca06a8d.js",
+    "index.html": "/abacus%20/index.html",
+    "main.ccf4ecf1.css.map": "/abacus%20/static/css/main.ccf4ecf1.css.map",
+    "main.5ca06a8d.js.map": "/abacus%20/static/js/main.5ca06a8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccf4ecf1.css",
+    "static/js/main.5ca06a8d.js"
+  ]
+}
