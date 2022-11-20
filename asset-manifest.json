@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/abacus%20/static/css/main.ccf4ecf1.css",
-    "main.js": "/abacus%20/static/js/main.5ca06a8d.js",
+    "main.js": "/abacus%20/static/js/main.c36fdc03.js",
     "index.html": "/abacus%20/index.html",
     "main.ccf4ecf1.css.map": "/abacus%20/static/css/main.ccf4ecf1.css.map",
-    "main.5ca06a8d.js.map": "/abacus%20/static/js/main.5ca06a8d.js.map"
+    "main.c36fdc03.js.map": "/abacus%20/static/js/main.c36fdc03.js.map"
   },
   "entrypoints": [
     "static/css/main.ccf4ecf1.css",
-    "static/js/main.5ca06a8d.js"
+    "static/js/main.c36fdc03.js"
   ]
 }
