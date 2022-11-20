@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import s from './Counter.module.css'
 import {Button} from "../UI/Button/Button";
 import {useDispatch, useSelector} from "react-redux";

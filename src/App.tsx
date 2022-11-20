@@ -11,7 +11,7 @@ export  const setToLocalStorage = (value: string, state: any) => {
     localStorage.setItem(value, JSON.stringify(state[value as keyof typeof state]))
 }
 
-const App = () => {
+function App() {
 
     const state = useSelector<AppRootStateType, CounterStateType>(state => state.state)
     const dispatch = useDispatch()
