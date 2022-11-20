@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {Counter} from "./components/Counter/Counter";
+// @ts-ignore
 import s from './App.module.css'
 import {SettingsCounter} from "./components/SettingsCounter/SettingsCounter";
 import {useDispatch, useSelector} from "react-redux";
@@ -10,7 +11,7 @@ export  const setToLocalStorage = (value: string, state: any) => {
     localStorage.setItem(value, JSON.stringify(state[value as keyof typeof state]))
 }
 
-export const App = () => {
+const App = () => {
 
     const state = useSelector<AppRootStateType, CounterStateType>(state => state.state)
     const dispatch = useDispatch()
@@ -43,4 +44,4 @@ export const App = () => {
     );
 }
 
-
+export default App;
